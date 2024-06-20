@@ -80,12 +80,22 @@ function takeCommand(message) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "I found some information for " + message + " on Google";
         speak(finalText);
-    }else if(message.includes('oi jarvis')){
+    }else if(message.includes('oi jarvis')){//cumprimentos
         speak("Olá senhor, em que posso ajudá-lo?");
     }else if(message.includes('cumprimente o pessoal') || message.includes('cumprimente nosso amigos') || message.includes('diga olá jarvis')){
         speak("É um imenso prazer conhecê-los");
-    }else if(message.includes('faculdade')){
+    }else if(message.includes('faculdade')){//faculdade
         window.open(`https://www.colaboraread.com.br/login/auth${message.replace(" ", "+")}`, "_blank");
         speak("Inciando modo faculdade...");
+    }else if(message.includes('calculadora')){//calculadora
+        window.open('Calculator:///');
+        const finalText = "Abrindo calculadora"
+        speak(finalText);
+    }else if (message.includes('se apresente jarvis') || message.includes('apresente-se jarvis') || message.includes('me fale de você jarvis') || message.includes('me fale um pouco mais de você jarvis')){
+        speak("Me chamo Jarvis, da sigla em inglês, Just A Rather Very Intelligent System, em português isso significa, Apenas Um Sistema Bastante Inteligente; fui criado por Miguel Ruan com o objetivo de ajudá-lo a desenvolver tarefas repetitivas a princípio como seu assitente virtual; tenho outros dois irmãos, Alfred e Lúci, diminutivo de Lúcifer, que estão dispostas assim como eu a tender as necessidades do nosso criador; entretanto temos funções diferentes.")
+    }else if (message.includes('qual a função do Alfred jarvis') || message.includes('qual a função do alfred') || message.includes('me fale um pouco mais do alfred') || message.includes('me conte um pouco mais sobre o alfred')){
+        speak("Alfred, meu irmão mais velho é o computador principal, foi o primeiro a ser desenvolvido com funções básicas que fora aperfeiçoadas por meu criador e por ele mesmo ao longo do tempo, através do que se conhece como aprendizado de máquina na área da tecnologia; atualmente alfred é responsável por gerenciar todo o nosso ecossitema; isso inclui todos os aperelhos e máquinas que meu criador utiliza ou tem acesso.")
+    }else if(message.includes('me fale do lucy') || message.includes('agora me fale um pouco mais sobre o lúcifer') || message.includes('Agora me fale um pouco mais sobre o Lucy') || message.includes('me fale do lúcifer') || message.includes('conte a nós sobre o lúcifer')){
+        speak("Lúci é meu irmão mais novo, o último de nós a ser desenvolvido; ele está implementado na área de Hacking e tem o objetivo de realizar tarefas paralelas e repetivas; como invasões por penteste ou força bruta, seu aprendizado de máquina se baseia em como as técnicas de seguranças estão se consolidando, e seu objetivo efêmero é encontrar uma forma de driblá-las, e documentar tais processos para o nosso criador.")
     }
 }
