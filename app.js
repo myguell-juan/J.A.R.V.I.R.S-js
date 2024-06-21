@@ -45,32 +45,32 @@ btn.addEventListener('click', () => {
 });
 
 function takeCommand(message) {
-    if (message.includes('hey') || message.includes('hello')) {
-        speak("Hello Sir, How May I Help You?");
-    } else if (message.includes("open google")) {
+    if (message.includes('ei') || message.includes('olá')) {
+        speak("Olá senhor!");
+    } else if (message.includes("abrir google")) {
         window.open("https://google.com", "_blank");
-        speak("Opening Google...");
-    } else if (message.includes("open youtube")) {
+        speak("Abrindo Google...");
+    } else if (message.includes("abrir youtube")) {
         window.open("https://youtube.com", "_blank");
-        speak("Opening Youtube...");
-    } else if (message.includes("open facebook")) {
+        speak("Abrindo Youtube...");
+    } else if (message.includes("open instagram")) {
         window.open("https://facebook.com", "_blank");
-        speak("Opening Facebook...");
-    } else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
+        speak("Abrindo Facebook...");
+    } else if (message.includes('O que é') || message.includes('Quem é') || message.includes('quem são')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
-        const finalText = "This is what I found on the internet regarding " + message;
+        const finalText = "Isso foi o que encontrei na internet... " + message;
         speak(finalText);
     } else if (message.includes('wikipedia')) {
         window.open(`https://en.wikipedia.org/wiki/${message.replace("wikipedia", "").trim()}`, "_blank");
-        const finalText = "This is what I found on Wikipedia regarding " + message;
+        const finalText = "Isso foi o que encontrei na wikipedia... " + message;
         speak(finalText);
-    } else if (message.includes('time')) {
+    } else if (message.includes('hora')) {
         const time = new Date().toLocaleString(undefined, { hour: "numeric", minute: "numeric" });
-        const finalText = "The current time is " + time;
+        const finalText = "São " + time;
         speak(finalText);
-    } else if (message.includes('date')) {
+    } else if (message.includes('data')) {
         const date = new Date().toLocaleString(undefined, { month: "short", day: "numeric" });
-        const finalText = "Today's date is " + date;
+        const finalText = "Hoje é " + date;
         speak(finalText);
     } else if (message.includes('calculator')) {
         window.open('Calculator:///');
@@ -85,7 +85,7 @@ function takeCommand(message) {
     }else if(message.includes('cumprimente o pessoal') || message.includes('cumprimente nosso amigos') || message.includes('diga olá jarvis')){
         speak("É um imenso prazer conhecê-los");
     }else if(message.includes('faculdade')){//faculdade
-        window.open(`https://www.colaboraread.com.br/login/auth${message.replace(" ", "+")}`, "_blank");
+        window.open(`https://www.colaboraread.com.br${message.replace(" ", "+")}`, "_blank");
         speak("Inciando modo faculdade...");
     }else if(message.includes('calculadora')){//calculadora
         window.open('Calculator:///');
@@ -107,5 +107,12 @@ function takeCommand(message) {
         }
     }else if(message.includes('Jarvis acho que eles estão ficando com medo') || message.includes('jarvis acho que eles estão ficando com medo') || message.includes('Jarvis você está assuntando o pessoal') || message.includes('jarvis você está assustando o pessoal') || message.includes('Jarvis acho que você está assutando eles') || message.includes('jarvis acho que você está assutando eles')){
         speak("Sinto muito senhor, recalibrando parâmetros agora mesmo!");
+    }else if(message.includes('abrir o whatsapp') || message.includes('')){
+        window.open('Whatsapp:///');
+        const finalText = "Abrindo o whatsapp"
+        speak(finalText);
+    }else if(message.includes('diga a ela o tanto que eu amo ela') || message.includes('Diga a ela o tanto que eu amo ela') || message.includes('Diga a ela o quanto eu a amo')){
+        window.open("https://www.youtube.com/watch?v=LXuYY9HxDY0", "_balnk");
+        speak("dizendo...");
     }
 }
